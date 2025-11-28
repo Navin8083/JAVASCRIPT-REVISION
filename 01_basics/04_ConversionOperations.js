@@ -74,10 +74,18 @@ let userOne={
     upi: 'navin@ybl'
 }
 let userTwo=userOne;
- userTwo.email='naveen12@gmai.com'
+ userTwo.email='naveen12@gmail.com'
+
+ userTwo.upi='2345@ybl'
 
  console.log(userOne.email)
     console.log(userTwo.email)
+    console.log(userTwo.upi)
+
+
+
+
+
  
 
  
