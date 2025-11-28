@@ -54,10 +54,37 @@ let myObj={
     age:22,
 }
 const myFunction=function(){
-console.log("Hello World");
+//console.log("Hello World");
 
 }
-console.log(typeof userEmail)
+//console.log(typeof userEmail)
+
+//...........Memory allocation.........//
+
+// Premivite data store in stack memory
+// Non premitive data store in heap memory
+
+let myname="Navin";
+
+let othername=myname;
+console.log(othername);
+
+let userOne={
+    email: 'navin@google.com',
+    upi: 'navin@ybl'
+}
+let userTwo=userOne;
+ userTwo.email='naveen12@gmai.com'
+
+ console.log(userOne.email)
+    console.log(userTwo.email)
+ 
+
+ 
+
+
+
+
 
 
 
