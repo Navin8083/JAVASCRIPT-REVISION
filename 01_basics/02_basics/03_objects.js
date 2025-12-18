@@ -1,48 +1,62 @@
+const mySym=Symbol("key1");
+
 const jsUser ={
     name:"Naveen",
     age:18,
     class:"Tenth",
     email: "navindubey@cutm.ac.in",
+    "new_subject": "Mathematics",
     location:"West_champaran",
-
+    [mySym]:"myValue" // symbol as key
 }
-console.log(jsUser);
-console.log(typeof jsUser);
+// console.log(jsUser.email); 
+// console.log(jsUser['email']);
+// console.log(jsUser.new_subject);
+// console.log(jsUser[mySym]);
+     //console.log(jsUser);
 
-// accessing object properties
-console.log(jsUser.name);
-console.log(jsUser.age);
-console.log(jsUser.class);
-console.log(jsUser.email);
-console.log(jsUser.location);
+// console.log(jsUser);
+// console.log(typeof jsUser);
 
-// updating object properties
-jsUser.age = 19;
-jsUser.location = "East_champaran";
+// // accessing object properties
+// console.log(jsUser.name);
+// console.log(jsUser.age);
+// console.log(jsUser.class);
+// console.log(jsUser.email);
+// console.log(jsUser.location);
 
-console.log("After updating:");
-console.log(jsUser);
+// // updating object properties
+// jsUser.age = 19;
+// jsUser.location = "East_champaran";
 
-//adding new property
-jsUser.phone = "123-456-7890";
-console.log("After adding phone number:");
-console.log(jsUser);
+// console.log("After updating:");
+// console.log(jsUser);
 
-// // deleting a property
-delete jsUser.class;
-console.log("After deleting class:");
-console.log(jsUser);
+// //adding new property
+// jsUser.phone = "123-456-7890";
+// console.log("After adding phone number:");
+// console.log(jsUser);
 
-// nested object
-const student = {
-    name: "Amit",
-    age: 20,
-    address: {
-        street: "123 Main St",
-        city: "Patna",
-        state: "Bihar"
-    }
-};
+// // // deleting a property
+// delete jsUser.class;
+// console.log("After deleting class:");
+// console.log(jsUser);
 
-console.log("Student Address:", student.address);
-console.log("Student City:", student.address.city);
+// // nested object
+// const student = {
+//     name: "Amit",
+//     age: 20,
+//     address: {
+//         street: "123 Main St",
+//         city: "Patna",
+//         state: "Bihar"
+//     }
+// };
+
+// console.log("Student Address:", student.address);
+// console.log("Student City:", student.address.city);
+jsUser.greeting = function(){
+    console.log("Hello, welcome to JavaScript objects!");
+    console.log(`Hello jsuser, ${this.name}`);
+}
+      console.log(jsUser.greeting());
